@@ -190,8 +190,10 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Unicode Convert" },
+		{ "Comment", "/* If it cannot be converted, \"NULL\" will be returned and an error will be logged. */" },
 		{ "DisplayName", "Character To Unicode" },
 		{ "ModuleRelativePath", "Public/UnicodeHandlerBPLibrary.h" },
+		{ "ToolTip", "If it cannot be converted, \"NULL\" will be returned and an error will be logged." },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "CharacterToUnicode", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::UnicodeHandlerBPLibrary_eventCharacterToUnicode_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Statics::Function_MetaDataParams)) };
@@ -248,12 +250,10 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Unicode Convert" },
-		{ "Comment", "/* for single character */" },
 		{ "ModuleRelativePath", "Public/UnicodeHandlerBPLibrary.h" },
-		{ "ToolTip", "for single character" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "CharacterToUnicode_Single", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::UnicodeHandlerBPLibrary_eventCharacterToUnicode_Single_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "CharacterToUnicode_Single", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::UnicodeHandlerBPLibrary_eventCharacterToUnicode_Single_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00082401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -307,10 +307,10 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Unicode Convert" },
-		{ "Comment", "// If it cannot be converted, \"NULL\" will be returned and an error will be logged.\n// It first converts unicode letters into LOWERCASE letters (I don't want developers to pay attention to unicode letters case), then splits them into arrays according to \"/\", and finally combines the converted results for output.\n" },
+		{ "Comment", "// If it cannot be converted, \"NULL\" will be returned and an error will be logged.\n" },
 		{ "DisplayName", "Unicode To Character" },
 		{ "ModuleRelativePath", "Public/UnicodeHandlerBPLibrary.h" },
-		{ "ToolTip", "If it cannot be converted, \"NULL\" will be returned and an error will be logged.\nIt first converts unicode letters into LOWERCASE letters (I don't want developers to pay attention to unicode letters case), then splits them into arrays according to \"/\", and finally combines the converted results for output." },
+		{ "ToolTip", "If it cannot be converted, \"NULL\" will be returned and an error will be logged." },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "UnicodeToCharacter", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::UnicodeHandlerBPLibrary_eventUnicodeToCharacter_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Statics::Function_MetaDataParams)) };
@@ -372,7 +372,7 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 		{ "ToolTip", "for single character" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "UnicodeToCharacter_Single", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::UnicodeHandlerBPLibrary_eventUnicodeToCharacter_Single_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00022401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUnicodeHandlerBPLibrary, nullptr, "UnicodeToCharacter_Single", nullptr, nullptr, sizeof(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::UnicodeHandlerBPLibrary_eventUnicodeToCharacter_Single_Parms), Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00082401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -402,10 +402,10 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 		(UObject* (*)())Z_Construct_UPackage__Script_UnicodeHandler,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UUnicodeHandlerBPLibrary_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode, "CharacterToUnicode" }, // 3626086872
-		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single, "CharacterToUnicode_Single" }, // 3260088351
-		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter, "UnicodeToCharacter" }, // 3007335139
-		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single, "UnicodeToCharacter_Single" }, // 186600625
+		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode, "CharacterToUnicode" }, // 4123079443
+		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_CharacterToUnicode_Single, "CharacterToUnicode_Single" }, // 3341537796
+		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter, "UnicodeToCharacter" }, // 4191927695
+		{ &Z_Construct_UFunction_UUnicodeHandlerBPLibrary_UnicodeToCharacter_Single, "UnicodeToCharacter_Single" }, // 3970948898
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UUnicodeHandlerBPLibrary_Statics::Class_MetaDataParams[] = {
@@ -428,7 +428,7 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
-		0x000000A0u,
+		0x001000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UUnicodeHandlerBPLibrary_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UUnicodeHandlerBPLibrary_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_UUnicodeHandlerBPLibrary()
@@ -453,9 +453,9 @@ template<> UNICODEHANDLER_API UScriptStruct* StaticStruct<FStru_CharacterTable>(
 		{ FStru_CharacterTable::StaticStruct, Z_Construct_UScriptStruct_FStru_CharacterTable_Statics::NewStructOps, TEXT("Stru_CharacterTable"), &Z_Registration_Info_UScriptStruct_Stru_CharacterTable, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStru_CharacterTable), 3249245815U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UUnicodeHandlerBPLibrary, UUnicodeHandlerBPLibrary::StaticClass, TEXT("UUnicodeHandlerBPLibrary"), &Z_Registration_Info_UClass_UUnicodeHandlerBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnicodeHandlerBPLibrary), 573719908U) },
+		{ Z_Construct_UClass_UUnicodeHandlerBPLibrary, UUnicodeHandlerBPLibrary::StaticClass, TEXT("UUnicodeHandlerBPLibrary"), &Z_Registration_Info_UClass_UUnicodeHandlerBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUnicodeHandlerBPLibrary), 2181334175U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_4208502503(TEXT("/Script/UnicodeHandler"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_1483271868(TEXT("/Script/UnicodeHandler"),
 		Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_UnicodeHandler_Source_UnicodeHandler_Public_UnicodeHandlerBPLibrary_h_Statics::ScriptStructInfo),
 		nullptr, 0);

@@ -2,35 +2,42 @@
 
 #include "UnicodeHandlerBPLibrary.h"
 #include "UnicodeHandler.h"
-#include "Kismet/KismetSystemLibrary.h"
 
 UUnicodeHandlerBPLibrary::UUnicodeHandlerBPLibrary(const FObjectInitializer& init) {}
 
 FString UUnicodeHandlerBPLibrary::UnicodeToCharacter(const FString& unicode, const UDataTable* DataTable)
 {
+	/* check necessary conditions */
 	if (DataTable == nullptr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("CANT FIND DataTable."));
 		return FString("NULL");
 	}
 
+	/* Used to store the split Unicode */
 	TArray<FString> UnicodeList;
+
+	/* This is our result */
 	FString Result("");
 
+	/* Split unicode string according to the symbol "\" and convert them to lowercase */
 	unicode.ToLower().ParseIntoArray(UnicodeList, TEXT("\\"));
 
+	/* See how many strings are splitted */
 	if (UnicodeList.Num() == 0)
 	{
 		UE_LOG(LogTemp, Error, TEXT("Empty unicode blank."));
 		return FString("NULL");
 	}
 
+	/* Translate UnicodeList sentence by sentence, and then append it to our result */
 	for (auto& S : UnicodeList)
 	{
 		S = FString(TEXT("\\")).Append(S);
 		Result = Result.Append(UnicodeToCharacter_Single(S, DataTable));
 	}
 
+	/* OK */
 	return Result;
 }
 

@@ -7,9 +7,9 @@
 	"Category": "Tool",
 	"CreatedBy": "WyvernLang",
 	"CreatedByURL": "",
-	"DocsURL": "",
+	"DocsURL": "https://github.com/WyvernCoder/UnicodeHandler_Guide/blob/nMain/Readme.md",
 	"MarketplaceURL": "",
-	"SupportURL": "",
+	"SupportURL": "qwe2373002368@hotmail.com",
 	"EngineVersion": "5.0.0",
 	"CanContainContent": true,
 	"Installed": true,
@@ -20,7 +20,6 @@
 			"LoadingPhase": "PreLoadingScreen",
 			"PlatformAllowList": [
 				"Win64",
-				"Mac",
 				"Android"
 			]
 		}
